@@ -4,5 +4,5 @@ USER root
 RUN pip3 install cloudinary unidecode
 USER odoo
 COPY ./addons /mnt/extra-addons
-COPY ./config/odoo/conf /etc/odoo/conf/odoo.conf
+COPY ./config/odoo.conf /etc/odoo/
 
