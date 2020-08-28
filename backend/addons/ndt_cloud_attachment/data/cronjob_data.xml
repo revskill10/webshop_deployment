@@ -1,0 +1,15 @@
+<odoo>
+    <record id="product_template_test_1" model="ir.cron">
+        <field name="name">product template test</field>
+        <field name="active">False</field> 
+        <field name="user_id" ref="base.user_root"/>
+        <field name="interval_number">1</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field eval="False" name="doall"/>
+        <field eval="'product.template'" name="model"/>
+        <field ref="model_product_template" name="model_id"/>
+        <field name="state">code</field>
+        <field name="code">model.product_template_test()</field>
+    </record>
+</odoo>

@@ -1,0 +1,30 @@
+<odoo>
+    <record id="product_normal_form_view" model="ir.ui.view">
+        <field name="name">product_normal_form_view</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_normal_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='type']" position="after">
+                <field name="url_image_cloud_at" />
+                <field name="url_image_cloud_variant_at" />
+            </xpath>
+            <!-- <xpath expr="//field[@name='lst_price']" position="before">
+                <field name="url_image_view" widget="image" />
+            </xpath> -->
+        </field>
+    </record>
+
+    <record id="product_product_tree_view" model="ir.ui.view">
+        <field name="name">product_product_tree_view</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_product_tree_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='active']" position="after">
+                <field name="url_image_cloud_at" />
+                <field name="url_image_cloud_variant_at" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+
+
+</odoo>

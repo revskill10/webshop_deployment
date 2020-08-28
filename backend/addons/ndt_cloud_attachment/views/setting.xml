@@ -1,0 +1,87 @@
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.product</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="stock.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='production_lot_info']" position="after">
+                <h2 id="cloud_image">Cloud Image</h2>
+                <div class="row mt16 o_settings_container">
+                    <div class="col-xs-12 col-md-6 o_setting_box" title="This default value is applied to any new product created. This can be changed in the product detail form.">
+                        <div class="o_setting_right_pane">
+                            <label for="cloud_name"/>
+                            <div class="text-muted">
+                                    cloud_name
+                            </div>
+                            <div class="content-group">
+                                <div class="mt16">
+                                    <field name="cloud_name"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane"/>
+                        <div class="o_setting_right_pane">
+                            <label string="api_key"/>
+                            <div class="text-muted">
+                                    api_key
+                            </div>
+                            <div class="text-muted">
+                                <field name="api_key"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-6 o_setting_box" title="This default value is applied to any new product created. This can be changed in the product detail form.">
+                        <div class="o_setting_right_pane">
+                            <label for="api_secret"/>
+                            <div class="text-muted">
+                                    api_secret
+                            </div>
+                            <div class="content-group">
+                                <div class="mt16">
+                                    <field name="api_secret"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="is_cloud_upload_attachment"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="is_cloud_upload_attachment"/>
+                            <div class="text-muted">
+                                    is_cloud_upload_attachment
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- <div class="col-xs-12 col-md-6 o_setting_box" title="This default value is applied to any new product created. This can be changed in the product detail form.">
+                        <div class="o_setting_right_pane">
+                            <label for="is_cloud_upload_attachment"/>
+                            <div class="text-muted">
+                                    is_cloud_upload_attachment
+                            </div>
+                            <div class="content-group">
+                                <div class="mt16">
+                                    <field name="is_cloud_upload_attachment"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+
+
+
+
+
+</odoo>

@@ -1,0 +1,13 @@
+<odoo>
+    <record id="ndt_sol_action" model="ir.actions.act_window">
+      <field name="name">sol</field>
+      <field name="res_model">sale.order.line</field>
+      <!-- <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field> -->
+    </record>
+
+    <menuitem
+        action="ndt_sol_action" id="menu_ndt_sol"
+        parent="sale.sale_order_menu" />
+        
+</odoo>

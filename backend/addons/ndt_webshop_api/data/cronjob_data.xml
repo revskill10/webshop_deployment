@@ -1,0 +1,73 @@
+<odoo>
+    
+    <record id="place_order_cronjob" model="ir.cron">
+        <field name="name">place_order_cronjob </field>
+        <field name="active">False</field> 
+        <field name="user_id" ref="base.user_root"/>
+        <field name="interval_number">1</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">1</field>
+        <field eval="False" name="doall"/>
+        <field eval="'sale.order'" name="model"/>
+        <field ref="sale.model_sale_order" name="model_id"/>
+        <field name="state">code</field>
+        <field name="code">model.place_order_cronjob()</field>
+    </record>
+
+    <record id="place_order_cronjob1" model="ir.cron">
+        <field name="name">place_order_cronjob1 </field>
+        <field name="active">False</field> 
+        <field name="user_id" ref="base.user_root"/>
+        <field name="interval_number">1</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">1</field>
+        <field eval="False" name="doall"/>
+        <field eval="'sale.order'" name="model"/>
+        <field ref="sale.model_sale_order" name="model_id"/>
+        <field name="state">code</field>
+        <field name="code">model.place_order_cronjob1()</field>
+    </record>
+
+    <record id="place_order_cronjob2" model="ir.cron">
+        <field name="name">place_order_cronjob2 </field>
+        <field name="active">False</field> 
+        <field name="user_id" ref="base.user_root"/>
+        <field name="interval_number">1</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">1</field>
+        <field eval="False" name="doall"/>
+        <field eval="'sale.order'" name="model"/>
+        <field ref="sale.model_sale_order" name="model_id"/>
+        <field name="state">code</field>
+        <field name="code">model.place_order_cronjob2()</field>
+    </record>
+
+    <record id="place_order_cronjob3" model="ir.cron">
+        <field name="name">place_order_cronjob3 </field>
+        <field name="active">False</field> 
+        <field name="user_id" ref="base.user_root"/>
+        <field name="interval_number">1</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">1</field>
+        <field eval="False" name="doall"/>
+        <field eval="'sale.order'" name="model"/>
+        <field ref="sale.model_sale_order" name="model_id"/>
+        <field name="state">code</field>
+        <field name="code">model.place_order_cronjob3()</field>
+    </record>
+
+    <record id="place_order_cronjob4" model="ir.cron">
+        <field name="name">place_order_cronjob4 </field>
+        <field name="active">False</field> 
+        <field name="user_id" ref="base.user_root"/>
+        <field name="interval_number">1</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">1</field>
+        <field eval="False" name="doall"/>
+        <field eval="'sale.order'" name="model"/>
+        <field ref="sale.model_sale_order" name="model_id"/>
+        <field name="state">code</field>
+        <field name="code">model.place_order_cronjob4()</field>
+    </record>
+
+</odoo>

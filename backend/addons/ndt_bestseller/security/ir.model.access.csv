@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ndt_bestseller,access_ndt_bestseller,model_ndt_bestseller,,1,1,1,1

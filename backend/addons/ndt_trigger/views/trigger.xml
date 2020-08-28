@@ -1,0 +1,50 @@
+<odoo>
+    <record id="trigger_form" model="ir.ui.view">
+            <field name="name">Trigger Form</field>
+            <field name="model">ndt_trigger.trigger</field>
+            <field name="arch" type="xml">
+                
+                <form string="Trigger Form">
+                    <header>
+                        <button name="run_function" string="run_function" type="object" class="oe_highlight"/>
+                    </header>
+                    <group>
+                        <group>
+                            <field name="offset"/>
+                            <field name="limit"/>
+                            <field name="trigger_value"/>
+                            <field name="count"/>
+                        </group>
+                        <group>
+                            <field name="model_id"/>
+                            <field name="function"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+    </record>
+
+
+
+    <record id="trigger_list" model="ir.ui.view">
+            <field name="name">Trigger List</field>
+            <field name="model">ndt_trigger.trigger</field>
+            <field name="arch" type="xml">
+                <tree string="Trigger Form">
+                        <field name="offset"/>
+                        <field name="limit"/>
+                        <field name="trigger_value"/>
+                        <field name="count"/>
+                </tree>
+            </field>
+    </record>
+
+    <record id="ndt_trigger_action" model="ir.actions.act_window">
+      <field name="name">Trigger</field>
+      <field name="res_model">ndt_trigger.trigger</field>
+    </record>
+
+    <menuitem
+        action="ndt_trigger_action" id="ndt_trigger_menu"
+        parent="stock.menu_product_in_config_stock" />
+</odoo>

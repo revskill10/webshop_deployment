@@ -1,0 +1,15 @@
+<odoo>
+    <record id="run_ghn_province" model="ir.cron">
+        <field name="name">ghn_province</field>
+        <field name="active">False</field> 
+        <field name="user_id" ref="base.user_root"/>
+        <field name="interval_number">1</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">1</field>
+        <field eval="False" name="doall"/>
+        <field eval="'res.country.province'" name="model"/>
+        <field ref="as_vn_address.model_res_country_province" name="model_id"/>
+        <field name="state">code</field>
+        <field name="code">model.ghn_province()</field>
+    </record>
+</odoo>

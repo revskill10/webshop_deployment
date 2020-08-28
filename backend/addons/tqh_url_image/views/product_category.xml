@@ -1,0 +1,57 @@
+<odoo>
+    <record id="product_category_form_view_inherit" model="ir.ui.view">
+        <field name="name">product_category_form_view</field>
+        <field name="model">product.category</field>
+        <field name="inherit_id" ref="product.product_category_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='parent_id']" position="after">
+                <field name="url_image" />
+                <field name="url_images" />
+                <field name="short_desc" />
+                <field name="is_web_publish" />
+                <field name="is_banner" />
+                <field name="url_image_ids" >
+                    <tree string="Image lines" editable="bottom">
+                        <field name="url_image_view" widget="image" class="oe_avatar"/>
+                        <field name="url_image" />
+                    </tree>
+                </field>
+            </xpath>
+            
+        </field>
+    </record>
+
+
+    <record id="product_category_list_view" model="ir.ui.view">
+        <field name="name">product_category_list_view</field>
+        <field name="model">product.category</field>
+        <field name="inherit_id" ref="product.product_category_list_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='display_name']" position="after">
+                <field name="url_image" />
+                <field name="short_desc" />
+                <field name="is_web_publish" />
+                <field name="is_banner" />
+            </xpath>
+        </field>
+    </record>
+
+
+    <!-- <record id="ndt_url_image_list_view" model="ir.ui.view">
+        <field name="name">ndt_url_image_list_view</field>
+        <field name="model">ndt.url.image</field>
+        <field name="arch" type="xml">
+           <tree>
+                <field name="url_image_view" widget="image" class="oe_avatar"/>
+                <field name="url_image" />
+           </tree>
+        </field>
+    </record> -->
+
+
+
+
+
+    
+
+</odoo>

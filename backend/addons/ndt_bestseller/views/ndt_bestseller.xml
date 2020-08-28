@@ -1,0 +1,44 @@
+<odoo>
+  <data>
+    <record id="ndt_bestseller_form" model="ir.ui.view">
+            <field name="name">ndt.bestseller</field>
+            <field name="model">ndt.bestseller</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                      <field name="product_id" />
+                      <field name="is_bestseller" />
+                      <field name="is_bestview" />
+                      <field name="is_new" />  
+                      <field name="sequence" /> 
+                    </group>
+                </form>
+            </field>
+    </record>
+
+    <record id="ndt_bestseller_tree" model="ir.ui.view">
+            <field name="name">ndt.bestseller</field>
+            <field name="model">ndt.bestseller</field>
+            <field name="arch" type="xml">
+                <tree editable="bottom">
+                  <field name="product_id" />
+                  <field name="is_bestseller" />
+                  <field name="is_bestview" />
+                  <field name="is_new" />
+                  <field name="sequence" widget="handle" />
+                </tree>
+            </field>
+    </record>
+
+    <record id="ndt_bestseller_action" model="ir.actions.act_window">
+      <field name="name">Bestseller</field>
+      <field name="res_model">ndt.bestseller</field>
+      <!-- <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field> -->
+    </record>
+
+    <menuitem
+        action="ndt_bestseller_action" id="menu_ndt_bestseller"
+        parent="stock.menu_product_in_config_stock" />
+  </data>
+</odoo>

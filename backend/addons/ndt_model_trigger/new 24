@@ -1,0 +1,4 @@
+ảnh cha - > ảnh con ( nếu trống, nếu giống)
+
+ảnh cha ( set null) -> ảnh con ( null theo nếu giống)
+thằng con thay đổi, nhưng thằng con thành null --> bằng ảnh cha.

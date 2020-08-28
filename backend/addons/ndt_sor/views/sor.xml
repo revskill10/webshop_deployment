@@ -1,0 +1,48 @@
+<odoo>
+  <data>
+    <record id="ndt_bestseller_form" model="ir.ui.view">
+      <field name="name">ndt.sor</field>
+      <field name="model">ndt.sor</field>
+      <field name="arch" type="xml">
+        <form>
+          <group>
+            <field name="order_info" />
+            <field name="user_info" />
+            <field name="user_id" />
+            <field name="payment_url" />
+            <field name="payment_info" />
+            <field name="payment_response" />
+            <field name="is_paid" />
+            <field name="delivery_info" />
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <record id="ndt_sor_tree" model="ir.ui.view">
+      <field name="name">ndt.sor</field>
+      <field name="model">ndt.sor</field>
+      <field name="arch" type="xml">
+        <tree >
+          <field name="order_info" />
+          <field name="user_info" />
+          <field name="user_id" />
+          <field name="payment_url" />
+          <field name="payment_info" />
+          <field name="payment_response" />
+          <field name="is_paid" />
+          <field name="delivery_info" />
+        </tree>
+      </field>
+    </record>
+
+    <record id="ndt_sor_action" model="ir.actions.act_window">
+      <field name="name">SOR</field>
+      <field name="res_model">ndt.sor</field>
+      <!-- <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field> -->
+    </record>
+
+    <menuitem action="ndt_sor_action" id="menu_ndt_sor" parent="sale.sale_order_menu" />
+  </data>
+</odoo>

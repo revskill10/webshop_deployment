@@ -1,0 +1,11 @@
+<odoo>
+    <!-- <record model="ir.model.fields" id="product.field_product_template_image">
+        <field name="state" >manual</field>
+        <field name="is_upload_cloud" eval="True"></field>
+    </record>
+
+    <record model="ir.model.fields" id="product.field_product_product_image">
+        <field name="state">manual</field>
+        <field name="is_upload_cloud" eval="True"></field>
+    </record> -->
+</odoo>

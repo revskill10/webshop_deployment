@@ -1,0 +1,17 @@
+<odoo>
+  <data>
+    <record id="view_blog_post_form" model="ir.ui.view">
+        <field name="name">view_blog_post_form</field>
+        <field name="model">blog.post</field>
+        <field name="inherit_id" ref="website_blog.view_blog_post_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="content" />
+                <field name="url_image" />
+                <field name="slug" />
+            </xpath>
+        </field>
+    </record>
+
+  </data>
+</odoo>

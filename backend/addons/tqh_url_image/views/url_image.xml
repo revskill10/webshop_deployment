@@ -1,0 +1,38 @@
+<odoo>
+  <data>
+    <record id="url_image_form" model="ir.ui.view">
+            <field name="name">url image</field>
+            <field name="model">ndt.url.image</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="url_image_view" widget="image" class="oe_avatar" filename="name"/>
+                        <field name="name" />
+                        <field name="url_image" />
+                    </group>
+                </form>
+            </field>
+    </record>
+
+    <record id="url_image_tree" model="ir.ui.view">
+            <field name="name">url image</field>
+            <field name="model">ndt.url.image</field>
+            <field name="arch" type="xml">
+                <tree editable="bottom">
+                    <field name="url_image_view" widget="image" class="oe_avatar" filename="name"/>
+                    <field name="name" />
+                    <field name="url_image" />
+                </tree>
+            </field>
+    </record>
+
+    <record id="url_image_action" model="ir.actions.act_window">
+      <field name="name">Url Image</field>
+      <field name="res_model">ndt.url.image</field>
+    </record>
+
+    <menuitem
+        action="url_image_action" id="menu_url_image"
+        parent="stock.menu_product_in_config_stock" />
+  </data>
+</odoo>

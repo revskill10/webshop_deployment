@@ -1,0 +1,17 @@
+<odoo>
+    
+    <record id="attrs_jsonb_cronjob" model="ir.cron">
+        <field name="name">attrs_jsonb_cronjob </field>
+        <field name="active">False</field> 
+        <field name="user_id" ref="base.user_root"/>
+        <field name="interval_number">1</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">1</field>
+        <field eval="False" name="doall"/>
+        <field eval="'product.product'" name="model"/>
+        <field ref="product.model_product_product" name="model_id"/>
+        <field name="state">code</field>
+        <field name="code">model.attrs_jsonb_cronjob()</field>
+    </record>
+
+</odoo>

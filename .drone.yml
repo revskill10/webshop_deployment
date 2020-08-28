@@ -1,14 +1,32 @@
-pipeline:
-  build:
-    image: node
-    commands:
-      - cd frontend
-      - npm i redis --save
-  publish:
-      image: plugins/docker
-      dockerfile: ./frontend/Dockerfile
-      context: ./frontend
-      repo: checkraiser/webshop_frontend
-      tags: [latest, v1]
-      secrets: [ docker_username, docker_password ]
+kind: pipeline
+type: docker
+name: frontend
+
+steps:
+- name: build
+  image: node
+  commands:
+    - cd frontend
+    - npm i redis --save
+- name: publish
+  image: plugins/docker
+  dockerfile: ./frontend/Dockerfile
+  context: ./frontend
+  repo: checkraiser/webshop_frontend
+  tags: [latest, v1]
+  secrets: [ docker_username, docker_password ]
+---
+kind: pipeline
+type: docker
+name: backend
+
+steps:
+  - name: publish
+    image: plugins/docker
+    dockerfile: ./backend/Dockerfile
+    context: ./backend
+    repo: checkraiser/webshop_backend
+    tags: [latest, v1]
+    secrets: [ docker_username, docker_password ]
+    
   
