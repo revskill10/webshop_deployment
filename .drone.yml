@@ -16,5 +16,5 @@ pipeline:
   deploy_frontend:
     image: dstrebel/drone-kubectl-helm
     secrets: [ kubernetes_server, kubernetes_cert, kubernetes_token ]
-    kubectl: "apply -f ./frontend/deployment.yaml”
+    kubectl: "apply -f ./frontend/deployment.yaml
   
