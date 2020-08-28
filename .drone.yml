@@ -1,9 +1,16 @@
 pipeline:
-  publish:
+  build_backend:
     image: plugins/docker
     dockerfile: ./backend/Dockerfile
     context: ./backend
     repo: checkraiser/webshop_backend
+    tags: [latest, v1]
+    secrets: [ docker_username, docker_password ]
+  build_frontend:
+    image: plugins/docker
+    dockerfile: ./frontend/Dockerfile
+    context: ./frontend
+    repo: checkraiser/webshop_frontend
     tags: [latest, v1]
     secrets: [ docker_username, docker_password ]
   
