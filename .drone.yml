@@ -4,3 +4,11 @@ pipeline:
     commands:
       - cd frontend
       - npm i redis --save
+  publish:
+      image: plugins/docker
+      dockerfile: ./frontend/Dockerfile
+      context: ./frontend
+      repo: checkraiser/webshop_frontend
+      tags: [latest, v1]
+      secrets: [ docker_username, docker_password ]
+  
