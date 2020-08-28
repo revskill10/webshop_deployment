@@ -3,11 +3,6 @@ type: docker
 name: frontend
 
 steps:
-  - name: ls
-    image: alpine
-    commands:
-    - ls -la
-    - ls -la Dockerfile
   - name: build
     image: node
     commands:
@@ -15,7 +10,8 @@ steps:
       - npm i redis --save
   - name: publish
     image: plugins/docker
-    dockerfile: ./frontend/Dockerfile
+    context: ./backend
+    dockerfile: ./Dockerfile
     repo: checkraiser/webshop_frontend
     tags: [latest, v1]
     secrets: [ docker_username, docker_password ]
@@ -25,15 +21,10 @@ type: docker
 name: backend
 
 steps:
-  - name: ls
-    image: alpine
-    commands:
-    - ls -la
-    - ls -la Dockerfile
   - name: publish
     image: plugins/docker
-    dockerfile: ./backend/Dockerfile
-    context: ./backend
+    dockerfile: ./Dockerfile
+    context: ./frontend
     repo: checkraiser/webshop_backend
     tags: [latest, v1]
     secrets: [ docker_username, docker_password ]
